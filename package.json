@@ -1,0 +1,33 @@
+{
+  "name": "glsl-token-functions",
+  "version": "1.0.0",
+  "description": "Extract function definitions from an array of GLSL tokens.",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test | tap-spec"
+  },
+  "author": {
+    "name": "Hugh Kennedy",
+    "email": "hughskennedy@gmail.com",
+    "url": "http://github.com/hughsk"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "glsl-token-string": "^1.0.1",
+    "glsl-tokenizer": "^2.0.2",
+    "tap-spec": "^4.1.0",
+    "tape": "^4.2.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stackgl/glsl-token-functions.git"
+  },
+  "keywords": [
+    "ecosystem:stackgl"
+  ],
+  "homepage": "https://github.com/stackgl/glsl-token-functions",
+  "bugs": {
+    "url": "https://github.com/stackgl/glsl-token-functions/issues"
+  }
+}
