@@ -24,7 +24,14 @@
     "url": "git://github.com/stackgl/glsl-token-functions.git"
   },
   "keywords": [
-    "ecosystem:stackgl"
+    "ecosystem:stackgl",
+    "glsl",
+    "tokens",
+    "analyze",
+    "function",
+    "language",
+    "shader",
+    "arguments"
   ],
   "homepage": "https://github.com/stackgl/glsl-token-functions",
   "bugs": {
