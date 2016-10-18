@@ -16,7 +16,7 @@ test('glsl-token-functions', function (t) {
     return str(tokens.slice(d.args[0], d.args[1]))
   })
 
-  t.equal(fns.length, 30, 'discovered 30 functions')
+  t.equal(fns.length, 31, 'discovered 30 functions')
   t.deepEqual(names, [
     'noop',
     'doModel',
@@ -47,7 +47,8 @@ test('glsl-token-functions', function (t) {
     'smin',
     'doModel',
     'attenuate',
-    'mainImage'
+    'mainImage',
+    'precisionPrefix'
   ], 'all functions are in order of appearance with the correct name')
 
   t.deepEqual(types, [
@@ -80,7 +81,8 @@ test('glsl-token-functions', function (t) {
     'float',
     'vec2',
     'float',
-    'void'
+    'void',
+    'float'
   ], 'all functions have the appropriate return type listed')
 
   t.deepEqual(args, [
@@ -113,7 +115,8 @@ test('glsl-token-functions', function (t) {
     '(float a, float b, float k)',
     '(vec3 p, vec2 beats)',
     '(float d)',
-    '(out vec4 fragColor, in vec2 fragCoord)'
+    '(out vec4 fragColor, in vec2 fragCoord)',
+    '(float t)'
   ], 'all functions have the appropriate arguments listed')
 
   t.end()

@@ -468,3 +468,7 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
   fragColor.rgb = color;
   fragColor.a   = 1.0;
 }
+
+highp float precisionPrefix(float t) {
+  return t * 2.0;
+}

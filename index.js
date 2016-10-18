@@ -52,6 +52,18 @@ function functions (tokens) {
       braceStart = i
       returnType = tokens[j].data
       defnStart = j
+
+      // There are cases when a function definition includes a
+      // precision qualifier, e.g. highp float random();
+      // So we backtrack one extra step to check if that's the
+      // case, and handle it :)
+      var k = findPrevious(j, findGlyph)
+      switch (tokens[k] && tokens[k].data) {
+        case 'lowp':
+        case 'highp':
+        case 'mediump':
+          defnStart = k
+      }
     } else
     if (braceDepth && token.data === '}') {
       if (--braceDepth) continue
